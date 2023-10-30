@@ -1,0 +1,32 @@
+.nav {
+    &__list {
+        @include flex-v-center;
+        @include media-max-xs {
+            display: block;
+        }
+    }
+    &__link {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem;
+        color: $color-white;
+        text-decoration: none;
+        @include media-max-md {
+            font-size: 1.25rem;
+            line-height: calc(1rem * 4 / 3);
+        }
+        @include media-max-xs {
+            font-size: calc($size-base * 0.875);
+            line-height: calc($size-base * 1.25);
+        }
+        @include transition;
+        &:hover {
+            color: $color-blue;
+        }
+        &_active {
+            color: $color-blue;
+            text-decoration: underline;
+        }
+    }
+}

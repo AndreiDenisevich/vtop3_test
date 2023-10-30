@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+    src: url('../fonts/Lexend-Regular.eot'); /* IE9 */
+    src: url('../fonts/Lexend-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Lexend-Regular.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/Lexend-Regular.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/Lexend-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/Lexend-Regular.svg#Lexend') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+    src: url('../fonts/Lexend-Medium.eot'); /* IE9 */
+    src: url('../fonts/Lexend-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Lexend-Medium.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/Lexend-Medium.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/Lexend-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/Lexend-Medium.svg#Lexend') format('svg'); /* Legacy iOS */
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+    src: url('../fonts/Lexend-SemiBold.eot'); /* IE9 */
+    src: url('../fonts/Lexend-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Lexend-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/Lexend-SemiBold.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/Lexend-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/Lexend-SemiBold.svg#Lexend') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    font-style: normal;
+    font-weight: 450;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+    src: url('../fonts/FuturaPT-Book.eot');  /* IE9 */
+    src: url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),  /* IE6-IE8 */
+        url('../fonts/FuturaPT-Book.woff2') format('woff2'), /* Modern Browsers */
+        url('../fonts/FuturaPT-Book.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/FuturaPT-Book.ttf') format('truetype'); /* Safari, Android, iOS */
+}

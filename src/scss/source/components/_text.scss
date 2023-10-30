@@ -1,0 +1,117 @@
+.title {
+    display: block;
+    font-family: $font1;
+    font-style: normal;
+    text-transform: uppercase;
+    &_size {
+        &_h1 {
+            font-size: 6rem;
+            font-weight: 500;
+            line-height: 1;
+            @include media-max-sm {
+                font-size: 5rem;
+            }
+            @include media-max-xs {
+                font-size: calc($size-base * 2.875);
+                line-height: calc($size-base * 3.125);
+            }
+        }
+        &_h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 2.5rem;
+            @include media-max-xs {
+                font-size: calc($size-base * 2);
+                line-height: 1.25;
+            }
+        }
+    }
+    &_color {
+        &_white {
+            color: $color-white;
+        }
+        &_blue {
+            color: $color-blue;
+        }
+    }
+    &_text-align {
+        &_left {
+            text-align: left;
+        }
+        &_center {
+            text-align: center;
+            &_xs {
+                @include media-max-xs {
+                    text-align: center;
+                }
+            }
+        }
+        &_right {
+            text-align: right;
+        }
+    }
+}
+.subtitle {
+    font-family: $font1;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    @include media-max-xs {
+        font-size: calc($size-base * 1.25);
+        line-height: 1.3;
+    }
+    &_text-align {
+        &_center {
+            text-align: center;
+            &_xs {
+                @include media-max-xs {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &_color {
+        &_white {
+            color: $color-white;
+            &_60 {
+                color: $color-white_60;
+            }
+        }
+    }
+}
+.text {
+    &_size {
+        &_middle {
+            font-family: $font1;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.75rem;
+            @include media-max-sm {
+                font-size: $size-base;
+                line-height: 1.25;
+            } 
+        }
+        &_small {
+            font-family: $font2;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 450;
+            line-height: 1rem;
+            font-feature-settings: 'liga' off;
+            @include media-max-sm {
+                font-size: calc($size-base * 0.875);
+                line-height: $size-base;
+            } 
+        }
+    }
+    &_color {
+        &_white {
+            color: $color-white;
+            &_60 {
+                color: $color-white_60;
+            }
+        }
+    }  
+}

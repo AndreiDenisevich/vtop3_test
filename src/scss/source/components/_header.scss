@@ -1,0 +1,144 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    padding-top: 1rem;
+    @include media-max-sm {
+        padding-top: calc($size-base * 0.625);
+        padding-bottom: calc($size-base * 0.625);
+    }
+    &__row {
+        @include flex-all-sb;
+        padding: 1.25rem;
+        border: 0.25rem solid $color-blue;
+        border-radius: 4rem;
+        background-color: $color-darkblue;
+        @include media-max-lg {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        @include media-min-sm {
+            box-shadow: 0px -calc($size-base  * 1.5) calc($size-base * 1.25) calc($size-base / 2) $color-darkblue;
+        }
+        @include media-max-sm {
+            display: block;
+            padding: calc($size-base * 3.5) 0 0 0;
+            border: none;
+            border-radius: 0;
+            background-color: $color-transparent;
+        }
+    }
+    &__col {
+        padding: 0 1.5rem;
+        @include media-max-lg {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @include media-max-md {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        @include media-max-sm {
+            &:first-child {
+                position: fixed;
+                top: calc($size-base * 0.625);
+                width: 100%;
+                max-width: calc(100% - 2.5rem * 2);
+                @include flex-all-sb;
+                padding: calc($size-base * 0.5) calc($size-base * 0.75);
+                border: $border-width-s solid $color-blue;
+                border-radius: calc($size-base * 4);
+                background-color: $color-darkblue;
+                box-shadow: 0px -calc($size-base) calc($size-base * 1.25) calc($size-base * 1.5) $color-darkblue;
+            }
+            &:last-child {
+                padding-bottom: calc($size-base * 3.5);
+            }
+            &:not(:first-child) {
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        @include media-max-xs {
+            &:first-child {
+                max-width: calc(100% - $size-base * 0.625 * 2);
+            }
+        }
+    }
+    &__logo {
+        display: block;
+        width: auto;
+        height: 2rem;
+        cursor: pointer;
+        @include media-max-lg {
+            width: 16rem;
+            height: auto;
+        }
+        @include media-max-xs {
+            width: auto;
+        }
+    }
+    &__nav {
+        padding: 0.5rem;
+        @include media-max-sm {
+            padding: calc($size-base * 1.875) 0;
+        }
+    }
+    &__list {
+        @include media-max-sm {
+            display: block !important;
+        }
+    }
+    &__item {
+        &:not(:first-child) {
+            margin-left: 2rem;
+            @include media-max-lg {
+                margin-left: 1rem;
+            }
+            @include media-max-sm {
+                margin-left: 0;
+                margin-top: calc($size-base * 0.3125);
+            }
+        }
+    }
+    &__link {
+        @include media-max-sm {
+            display: block;
+            font-size: calc($size-base * 1.125);
+            line-height: calc($size-base * 1.5) !important;
+            padding: calc($size-base * 0.6875) calc($size-base * 1.125);
+            border: $border-width-s solid $color-blue;
+            border-radius: calc($size-base * 1.75);
+        }
+    } 
+    &__buttons {
+        @include flex-v-center;
+    }
+    &__btn {
+        &:not(:first-child) {
+            margin-left: 0.875rem;
+            @include media-max-sm {
+                font-size: $size-base;
+                line-height: 1.25;
+                padding: calc($size-base * 0.6875) calc($size-base * 1.125);
+                margin-left: 0;
+                border-radius: calc($size-base * 1.5);
+                &:not(:nth-child(2)) {
+                    margin-top: calc($size-base * 0.3125);
+                }
+            }
+        }
+        &_lang {
+            @include media-max-sm {
+                position: fixed;
+                top: calc($size-base * 0.625 * 2);
+                right: calc($size-base * 3.375 + 2.5rem);
+            }
+            @include media-max-xs {
+                right: calc($size-base * 3.375 + $size-base * 0.625);
+            }
+        }
+    }
+}

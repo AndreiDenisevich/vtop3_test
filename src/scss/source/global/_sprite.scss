@@ -1,0 +1,19 @@
+[class*=icon] {
+	display: block;
+    fill: currentColor;
+}
+
+.icon-globus,
+.icon-twitter,
+.icon-facebook,
+.icon-instagram,
+.icon-linkedin,
+.icon-youtube,
+.icon-tiktok,
+.icon-telegram,
+.icon-vk {
+	width: $size-base;
+	min-width: $size-base;
+	max-width: $size-base;
+	height: $size-base;
+}

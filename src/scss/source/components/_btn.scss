@@ -1,0 +1,92 @@
+.btn {
+    font-family: $font1;
+    @include flex-all-center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-style: solid;
+    color: $color-white;
+    @include transition;  
+    &_size {
+        &_s {
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.25rem;
+            padding: 0.75rem;
+            border-width: $border-width-s;
+            border-radius: 1.5rem;
+            @include media-max-md {
+                font-size: 1.25rem;
+                line-height: calc(1rem * 4 / 3);
+                padding: calc(1rem * 2 / 3);
+            }
+        }
+        &_m {
+            display: inline-flex;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2rem;
+            padding: 1rem 4.25rem;
+            border-width: 0.25rem;
+            border-radius: 3rem;
+            @include media-max-xs {
+                display: block;
+                width: 100%;
+                font-size: calc($size-base * 1.125);
+                line-height: normal;
+                padding: 13px 18px;
+                border-width: $border-width-s;
+                border-radius: calc($size-base * 3);
+                text-align: center;
+            }            
+        }
+    }
+    &_border {
+        &_blue {
+            border-color: $color-blue;
+            &:hover {
+                color: $color-blue;
+            }
+        }
+        &_purple {
+            border-color: $color-purple;
+            &:hover {
+                color: $color-purple;
+            }
+        }
+    }
+    &_fill {
+        &_blue {
+            border-color: $color-blue;
+            background-color: $color-blue;
+            &:hover {
+                background-color: $color-transparent;
+            }
+        }
+        &_purple {
+            border-color: $color-purple;
+            background-color: $color-purple;
+            &:hover {
+                background-color: $color-transparent;
+            }
+        }
+    }
+    &__text {
+        &_hide {
+            &_xs {
+                @include media-max-xs {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__icon {
+        &_purple {
+            fill: $color-purple; 
+        }
+        & + .btn__text {
+            margin-left: 0.5rem;
+        }
+    }
+}

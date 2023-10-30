@@ -1,0 +1,49 @@
+.blog {
+    width: 33.125rem;
+    @include media-max-sm {
+        width: 100%;
+    }
+    &__list {
+        border-radius: 6.25rem;
+        padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+        &:not(:hover) {
+            .blog__link_active {
+                background-color: $color-blue;
+            }
+        }
+        @include media-max-sm {
+            padding-top: calc($size-base / 2);
+            padding-right: calc($size-base - $border-width-s);
+            padding-bottom: calc($size-base * 2.5);
+            padding-left: calc($size-base / 2);
+            border-radius: calc($size-base * 3.125);
+        }
+    }
+    &__item {
+        &:not(:first-child) {
+            margin-top: 1rem;
+            @include media-max-xs {
+                margin-top: calc($size-base * 0.625);
+            }
+        }
+    }
+    &__link {
+        display: block;
+        padding: 1rem 4rem;
+        border-radius: 12.25rem;
+        background-color: $color-deepblue;
+        text-decoration: none;
+        &:hover {
+            background-color: $color-blue;
+            @include transition;
+        }
+        @include media-max-sm {
+            padding: calc($size-base * 0.9375) calc($size-base * 2.1875);
+            border-radius: calc($size-base * 2.5);
+        }
+    }
+    &__date {
+        display: block;
+        margin-top: 0.875rem;
+    }
+}

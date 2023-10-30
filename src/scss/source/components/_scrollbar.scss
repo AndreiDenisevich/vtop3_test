@@ -1,0 +1,109 @@
+.scrollbar-inner {
+    height: auto;
+    max-height: 37.325rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    border-radius: 6.25rem;
+    border: 0.1875rem solid $color-blue;
+    background-color: $color-white_12;
+    backdrop-filter: blur(0.625rem);
+    overflow: hidden !important;
+    position: relative;
+    @include media-max-sm {
+        max-height: calc($size-base * 26.25);
+        border-radius: calc($size-base * 3.125);
+        border-width: $border-width-s;
+    }
+    @include media-max-xs {
+        z-index: 2;
+    }
+}
+.scrollbar-external {
+    max-height: 37.25rem;
+    overflow: auto;
+    width: 100%;
+}
+.scroll-wrapper {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative;
+    & > .scroll-content {
+        border: none !important;
+        box-sizing: content-box !important;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin: 0;
+        max-height: none;
+        max-width: none !important;
+        overflow: scroll !important;
+        padding: 0;
+        position: relative !important;
+        width: auto !important;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
+    }
+} 
+.scroll-element {
+    box-sizing: content-box;
+    &.scroll-x {
+        display: none;
+    }
+    &.scroll-scrolly_visible {
+        display: block;
+    }
+    div {
+        box-sizing: content-box;
+    }
+    .scroll-bar,
+    .scroll-arrow {
+        cursor: pointer;
+    }
+}
+.external-scroll_y {
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+
+.external-scroll_y {
+    &.scroll-scrolly_visible {
+        display: block;
+        height: calc(100% - 6rem * 2);
+        right: 0;
+        top: 6rem;
+        width: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: $color-white_12;
+        border-radius: 0.625rem;
+        @include media-max-sm {
+            width: calc($size-base / 4); 
+            height: calc(100% - $size-base * 3.75 * 2);
+            top: calc($size-base * 3.75);
+            margin-left: calc($size-base / 8 * 3);
+            margin-right: calc($size-base / 8 * 3 - $border-width-s);
+        }
+    }
+    div {
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+    } 
+    .scroll-bar {
+        height: 6.5rem;
+        background-color: $color-blue;
+        border-radius: 0.625rem;
+        z-index: 12;
+        @include media-max-sm {
+            height: calc($size-base * 5);
+            border-radius: calc($size-base / 4);            
+        }
+    }
+}

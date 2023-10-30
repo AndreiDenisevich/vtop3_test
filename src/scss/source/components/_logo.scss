@@ -1,0 +1,24 @@
+.logo {
+    &__img {
+        display: block;
+        width: auto;
+        height: 100%;
+        @include media-max-lg {
+            width: 100%;
+            height: auto;
+        }
+        &_desctop {
+            @include media-max-xs {
+                display: none;
+            }
+        }
+        &_mobile {
+            width: calc($size-base * 3.375);
+            height: auto;
+            display: none;
+            @include media-max-xs {
+                display: block;
+            }
+        }
+    }
+}

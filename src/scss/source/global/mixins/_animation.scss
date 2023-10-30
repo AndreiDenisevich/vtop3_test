@@ -1,0 +1,35 @@
+// transitions
+
+@mixin transition {
+    transition: all .25s ease-out;
+}
+
+@mixin transition-menu {
+    transition: opacity .5s ease-out;
+}
+
+@mixin slide-in-out {
+    animation: ease-in-out 0s infinite alternate running slidein;
+}
+
+@mixin mobile-slide-in-out {
+    animation: ease-in-out 0s infinite alternate running mobile_slidein;
+}
+
+@keyframes slidein {
+    0% {
+        margin-top: -100%;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes mobile_slidein {
+    0% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}

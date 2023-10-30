@@ -1,0 +1,94 @@
+header,
+footer,
+main,
+section {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+    }
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-size: $size-base;
+    @include media-max-md {
+        font-size: calc($size-base * 3 / 4);
+    }
+}
+
+body {
+    position: relative;
+    font-family: $font1;
+    font-style: normal;
+    line-height: 1;
+    width: 100%;
+	min-width: 20rem;
+    height: auto;
+    min-height: 100vh;
+    @include media-max-sm {
+        &.mobile-overflow-hidden {
+            overflow: hidden;
+        }
+    }
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    background-color: $color-transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr {
+    margin: 0;
+}
+
+body {
+    background-color: $color-darkblue;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 102.5rem;
+    @include media-max-lg {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        max-width: 100%;
+    }
+    @include media-max-xs {
+        padding-left: calc($size-base * 0.625);
+        padding-right: calc($size-base * 0.625);
+    }
+}

@@ -1,0 +1,150 @@
+@import "./source/components/text";
+@import "./source/components/banner";
+@import "./source/components/scrollbar";
+@import "./source/components/blog";
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-bottom: 12rem;
+    overflow: hidden;
+    @include media-max-sm {
+        padding-top: calc($size-base * 4.125);
+    }
+    @include media-max-xs {
+        padding-bottom: calc($size-base * 14.5625);
+    }
+    &_bg {
+        &_ellipse {
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -11.125rem;
+                left: calc(50% - 50rem);
+                z-index: 1;
+                width: 14rem;
+                height: 81rem;
+                transform: rotate(-54.311deg);
+                pointer-events: none;
+                background: linear-gradient(180deg, $color-blue 0%, $color-blue_40 100%);                    
+                opacity: 0.55;
+                filter: blur(9.375rem);
+                @include media-max-xs {
+                    width: calc($size-base * 5.125);
+                    height: calc($size-base * 29.25);
+                    top: calc($size-base * 1.375);
+                    left: calc($size-base * 6.25);
+                    z-index: -2;
+                    filter: blur(calc($size-base * 2.5));
+                }
+            }
+        }
+        &_circle {
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: calc(50% + 34rem);
+                bottom: -7.5rem;
+                z-index: 1;
+                width: 36rem;
+                height: 36rem;
+                border-radius: 50%;
+                background: linear-gradient(256deg, $color-blue 0%, $color-purple 100%);
+                opacity: 0.7;
+                filter: blur(20rem);
+                pointer-events: none;
+                @include media-max-sm {
+                    width: calc($size-base * 15);
+                    height: calc($size-base * 15);
+                    filter: blur(calc($size-base * 8.5));
+                    left: auto;
+                    right: - calc($size-base * 6);
+                    bottom: calc($size-base * 9);              
+                }
+                @include media-max-xs {
+                    bottom: calc($size-base * 14.5625);              
+                }
+            }
+        }
+    }
+    &__row {
+        @include flex-sb;
+        @include media-max-xs {
+            display: block;
+        }
+    }
+    &__col {
+        &:first-child {
+            max-width: 42rem;
+            padding: 18.5rem 0;
+            z-index: 2;
+            @include media-max-sm {
+                max-width: 50%;
+            }
+            @include media-max-xs {
+                max-width: 100%;
+                padding-top: calc($size-base * 4.375);
+                padding-bottom: 0;
+            }
+        }
+        &:last-child {
+            padding: 8.75rem 0;
+            margin-left: 2rem;
+            z-index: 2;
+            @include media-max-sm {
+                max-width: calc(50% - 2rem);
+            }
+            @include media-max-xs {
+                max-width: 100%;
+                margin-left: 0;
+                margin-top: calc($size-base * 2);
+                padding-top: 0;
+                padding-bottom: calc($size-base * 4.375);
+            }
+        }
+    }
+    &__subtitle {
+        margin-top: 1.5rem;
+        @include media-max-xs {
+            margin-top: calc($size-base * 0.75);
+        }
+    }
+    &__btn {
+        margin-top: 3rem;
+        @include media-max-xs {
+            margin-top: calc($size-base * 1.5);
+        }
+    }
+    &__banner {
+        position: fixed;
+        top: 7rem;
+        left: 0;
+        bottom: 0;
+        z-index: -2;
+        width: 100%;
+        @include media-max-sm {
+            top: calc($size-base * 2);
+        }
+        @include media-max-xs {
+            position: relative;
+            top: 0;
+            margin-top: calc($size-base * 2);
+            margin-left: -calc($size-base * 0.625);
+            margin-right: -calc($size-base * 0.625);
+            width: calc(100% + $size-base * 0.625 * 2);
+        }
+        &_mask {
+            mask: linear-gradient(180deg, $color-white 63.64%, $color-transparent 95.45%);
+            mask-position: center -6rem;
+            mask-repeat: no-repeat;
+            @include media-max-xs {
+                mask: none;
+            }
+        }
+    }
+}

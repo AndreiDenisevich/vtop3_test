@@ -1,0 +1,62 @@
+.banner {
+    @include flex-h-stretch;
+    height: 100%;
+    position: relative;
+    left: calc(50% - 6rem);
+    top: -1rem;
+    overflow: hidden;
+    @include media-max-xs {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+    &__col {
+        width: 6.25rem;
+        background-repeat: repeat;
+        background-size: 100%;
+        @include slide-in-out;
+        @include media-max-xs {
+            width: 3000%;
+            height: calc($size-base * 3.125);
+            background-size: contain;
+            @include mobile-slide-in-out;
+        }
+        &:not(:first-child) {
+            margin-left: 1rem;
+            @include media-max-xs {
+                margin-left: 0;
+                margin-top: calc($size-base * 0.625);
+            }
+        }
+        &_bg {
+            &_1 {
+                animation-duration: 15s;
+                background-image: url($animotion-svg-1);
+                opacity: 0.2;
+                @include media-max-xs {
+                    background-image: url($animotion-svg-mobile-1);
+                    opacity: 0.4;
+                }
+            }
+            &_2 {
+                animation-duration: 10s;
+                background-image: url($animotion-svg-2);
+                opacity: 0.6;
+                @include media-max-xs {
+                    background-image: url($animotion-svg-mobile-2);
+                }
+            }
+            &_3 {
+                animation-duration: 12s;
+                background-image: url($animotion-svg-3);
+                opacity: 0.4;
+                @include media-max-xs {
+                    background-image: url($animotion-svg-mobile-3);
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}
